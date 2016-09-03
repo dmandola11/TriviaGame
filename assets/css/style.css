@@ -1,9 +1,54 @@
-h1 {
-    font-size: 45px;
-    position: relative;
-    left: 340px;
+body {
+    background-image: url(../images/pretty.jpg);
+    border-image-repeat: stretch;
+    background-color: pink;
 }
-button{
-	position: relative;
-    left: 490px;
+
+h1 {
+    font-size: 40px;
+    font-family: 'Bungee Shade';
+    position: relative;
+    color: deeppink;
+    margin: 0px 234px;
+    padding: 18px 0px;
+}
+
+.start,
+.quiz {
+    opacity: .8;
+    background-color: pink;
+}
+
+.btn-primary {
+    position: relative;
+    left: 54px;
+    top: 24px;
+    border: none;
+    opacity: 8.9;
+    background: #d51588;
+}
+
+p.start {
+    position: relative;
+    opacity: 8.9;
+    font-weight: bold;
+    color: #000000;
+    top: 49px;
+}
+
+.results {
+    position: relative;
+    top: 38px;
+}
+
+#correct {
+    font-family: 'Bungee Shade';
+    color: deeppink;
+    font-size: 24px;
+}
+
+#incorrect {
+    font-family: 'Bungee Shade';
+    color: deeppink;
+    font-size: 24px;
 }

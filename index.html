@@ -7,6 +7,7 @@
     <title>Trivia Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
 </head>
@@ -14,10 +15,13 @@
 <body>
     <div class="container">
         <h1>80's Movie Trivia Game!</h1>
-        <button type="button" class="btn btn-primary btn-lg start">Start The Game</button>
+        <div class="start jumbotron">
+            <button type="button" class="btn btn-primary btn-lg start">Start The Game</button>
+            <p class="start">When you click the start button you will have 90 seconds to answer 10 multiple choice questions about some famous 80's movies. Your results will display after the time is up. Good luck!</p>
+        </div>
         <div class="jumbotron quiz">
             <div>
-            	<h2>Time Remaining:</h2><span id= "timer"></span>
+                <h2>Time Remaining:</h2><span id="timer"></span>
                 <p class="question">1. Which amusement park are the Griswolds travelling to in National Lampoon's Vacation?</p>
                 <ul class="answers">
                     <input type="radio" class="rdbttn" name="q1" value="correct" id="q1a">
@@ -171,8 +175,8 @@
             </div>
         </div>
         <div class="results">
-        	<p id="correct"></p>
-        	<p id="incorrect"></p>
+            <p id="correct"></p>
+            <p id="incorrect"></p>
         </div>
     </div>
     <script src="assets/javascript/app.js" type="text/javascript"></script>
