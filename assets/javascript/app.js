@@ -1,21 +1,42 @@
+var correct = 0;
+var incorrect = 0;
 
-var count = 20
+$(".quiz").hide();
 
-var counter = setInterval(timer, 1000);
+$(".start").on("click", start);
 
-function timer(){
-	count = count -1;
-	if(count <= -1){
-		
-		clearInterval(counter);
+function start() {
+    $(".quiz").show();
+    $(".start").hide();
 
-		var answers = $('input:checked');
-		console.log(answers);
-		return;
-	}
 
-	document.getElementById("timer").innerHTML= count + " Seconds Left";
-}
+    var count = 20;
+    token = setInterval(function() {
+        count--;
 
-timer();
+        $('#timer').html(count + " Seconds");
 
+        if (count == 0) {
+            clearInterval(token);
+
+            answers = $('input:checked');
+            console.log(answers);
+            for (var i = 0; i < answers.length; i++) {
+            	if(answers.value === correct){
+            		correct++;
+            	}
+            }
+        };
+
+
+    }, 1000);
+    console.log(correct);
+    console.log(incorrect);
+
+
+
+
+
+
+    document.getElementById("timer").innerHTML = count + " Seconds Left";
+};
