@@ -14,6 +14,7 @@ h1 {
 }
 
 .start,
+.submit,
 .quiz {
     opacity: .8;
     background-color: pink;
@@ -26,6 +27,11 @@ h1 {
     border: none;
     opacity: 8.9;
     background: #d51588;
+}
+
+.submit{
+    position: relative;
+    left: 10px;
 }
 
 p.start {
@@ -51,4 +57,9 @@ p.start {
     font-family: 'Bungee Shade';
     color: deeppink;
     font-size: 24px;
+}
+
+#timer{
+    position: fixed;
+    right: 100px;
 }

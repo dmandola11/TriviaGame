@@ -11,7 +11,7 @@ function start() {
     $(".start").hide();
 
 
-    var count = 90;
+    count = 90;
     token = setInterval(function() {
         count--;
 
@@ -38,6 +38,8 @@ function start() {
             $("#correct").html("Right Answers: " + correct);
             $("#incorrect").html("Wrong Answers: " + incorrect);
 
+
+
             function finishGame() {
                 $('.quiz').hide();
                 $('.results').show();
@@ -52,3 +54,27 @@ function start() {
 
     document.getElementById("timer").innerHTML = count + " Seconds Left";
 };
+
+$('.submit').click(function(){
+            answers = $('input:checked');
+            console.log(answers);
+
+            for (var i = 0; i < answers.length; i++) {
+                if (answers[i].value === "correct") {
+                    correct++;
+
+                } else if (answers[i].value === "incorrect") {
+                    incorrect++;
+
+                }
+            }
+
+            console.log("correct", correct);
+            console.log("incorrect", incorrect);
+            $("#correct").html("Right Answers: " + correct);
+            $("#incorrect").html("Wrong Answers: " + incorrect);
+            $('.quiz').hide();
+            $('.results').show();
+            count = -1;
+
+});
